@@ -186,7 +186,7 @@ services:
         keywords: "JIRA"
         url: "https://kasmweb.atlassian.net/jira/software/c/projects/KASM/boards/5" 
   - name: "Kasm Workspaces"
-    icon: "fal fa-laptop-house"
+    icon: "far fa-network-wired"
     items:
       - name: "Kasm Lab"
         logo: "/assets/icons/Kasm_Cube.png"
