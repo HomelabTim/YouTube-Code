@@ -77,7 +77,7 @@ services:
         tag: "server"
         keywords: "proxmox"
         url: "https://proxmox.homelabtim.com"
-      - name: "Portanier"
+      - name: "Portainer"
         logo: "/assets/icons/portainer.png"
         subtitle: "Docker Dashboard"
         tag: "server"
@@ -190,7 +190,7 @@ services:
     items:
       - name: "Kasm Lab"
         logo: "/assets/icons/Kasm_Cube.png"
-        subtitle: "Kasm Lab Enviorment"
+        subtitle: "Kasm Lab Environment"
         tag: "server"
         keywords: "Kasm"
         url: "https://lab.kasmweb.link"
