@@ -1,0 +1,37 @@
+---
+version: "2"
+services:
+  qbittorrentvpn:
+    image: markusmcnugen/qbittorrentvpn
+    container_name: qbittorrentvpn
+    privileged: true   
+    environment:
+      - VPN_USERNAME= (YOUR INFO HERE)
+      - VPN_PASSWORD= (YOUR INFO HERE)
+      - VPN_ENABLED=yes
+      - LAN_NETWORK=192.168.0.0/24 or 192.168.1.0/24
+      - NAME_SERVERS=8.8.8.8,8.8.4.4
+    ports:
+      - 8080:8080
+      - 8999:8999
+      - 8999:8999/udp
+    volumes:
+      - /torrent/config/QBittorrentVPN:/config
+      - /data/admin/Media/Downloads:/downloads
+    restart: unless-stopped
+
+
+
+___________________add to fstab________________________
+
+sudo nano /etc/fstab
+//192.168.0.41/NAS /data cifs username=(YOUR INFO HERE),password=(YOUR INFO HERE) 0 0
+
+
+__________________________Never Forget_____________________________
+
+DONT USE SNAP WITH DOCKER!!!!!!
+if you do run this 
+sudo snap remove docker
+sudo rm -R /var/lib/docker
+sudo apt-get remove docker docker-engine docker.io

@@ -1,0 +1,11 @@
+version: '3'
+services:
+  pingvin-share:
+    image: stonith404/pingvin-share:latest
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    volumes:
+      - "/data:/opt/app/backend/data"
+
+

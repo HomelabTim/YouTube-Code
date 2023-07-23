@@ -1,0 +1,4 @@
+________________________location for access__________________________
+
+cd /var/www/nextcloud/config
+nano config.php

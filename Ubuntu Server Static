@@ -1,0 +1,42 @@
+________________________________________________Change Ubuntu Server to static___________________________________
+
+(change nameservers)
+echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null
+
+cd /etc/netplan/ 
+ls 
+nano the .yaml file 
+change to this structure below:
+
+
+network:
+    wifis:
+        wlp0s20f3:
+            dhcp4: false
+            addresses: [192.168.0.54/24]
+            gateway4: 192.168.0.1
+            nameservers:
+              addresses: [8.8.8.8,8.8.4.4,192.168.0.1]
+    version: 2
+    
+network:
+    ethernets:
+        ens18:
+            dhcp4: false
+            addresses: [192.168.0.54/24]
+            gateway4: 192.168.0.1
+            nameservers:
+              addresses: [8.8.8.8,8.8.4.4,192.168.0.1]
+    version: 2
+    
+then do a 
+sudo netplan apply
+or 
+sudo netplan --debug apply
+check that the ip is there 
+ip a 
+
+______________________________________change hostname_______________________________
+
+sudo nano /etc/hostname
+reboot
