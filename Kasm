@@ -21,8 +21,6 @@ sudo chown -R 1000:1000 /data
 cd /tmp
 curl -O https://kasmweb-build-artifacts.s3.amazonaws.com/kasm_backend/branches/develop/kasm_workspaces_develop.tar.gz
 tar -xf kasm_workspaces_develop.tar.gz
-
-#run kasm installer
 sudo bash kasm_release/install.sh
 
 /data/profiles/mystuff/{username}
