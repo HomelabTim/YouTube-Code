@@ -1,5 +1,5 @@
 
-#_______________________set swap_____________________________________________
+#_______________________set swap(no longer needed)_____________________________________________
 
 sudo dd if=/dev/zero bs=1M count=5120 of=/mnt/5GiB.swap
 sudo chmod 600 /mnt/5GiB.swap
@@ -12,16 +12,20 @@ echo '/mnt/5GiB.swap swap swap defaults 0 0' | sudo tee -a /etc/fstab
 #__________________install Kasm____________________________________________________
 
 
-#create directories and set ownership
+#_______________________create directories and set ownership_____________________________________________
+
 sudo mkdir -p /data/shares/development
 sudo mkdir -p /data/profiles
 sudo chown -R 1000:1000 /data
 
-#download and extract kasm workspace
+#_______________________download and extract kasm workspace_____________________________________________
+
 cd /tmp
 curl -O https://kasmweb-build-artifacts.s3.amazonaws.com/kasm_backend/branches/develop/kasm_workspaces_develop.tar.gz
 tar -xf kasm_workspaces_develop.tar.gz
 sudo bash kasm_release/install.sh
+
+#_______________________presistant profiles_____________________________________________
 
 /data/profiles/{username}
 
@@ -35,12 +39,7 @@ sudo bash kasm_release/install.sh
     }
 }
 
-#Default Web Filter Policy
-
-
-#Chrome Favorites
-
-#Managed Policy
+#_______________________chrome managed policies_____________________________________________
 
 /etc/opt/chrome/policies/managed/bookmarks.json
 
@@ -57,7 +56,8 @@ sudo bash kasm_release/install.sh
     ]
 }
 
-#change the Docker run config override to this
+
+#_______________________change the Docker run config override to this_____________________________________________
 
 {
     "hostname":"kasm",
@@ -65,7 +65,7 @@ sudo bash kasm_release/install.sh
     "environment" : {"START_PULSEAUDIO" : "0"}
 }
 
-#add this to Docker Exec Config (JSON) for sudo and root
+#_______________________add this to Docker Exec Config (JSON) for sudo and root_____________________________________________
 
 {
  "first_launch":{
@@ -74,11 +74,11 @@ sudo bash kasm_release/install.sh
   }
 }
 
-#code to connect to containers root profile
+#_______________________code to connect to containers root profile_____________________________________________
 
 docker exec -it -u root (adminkasm.lo_9eea9be5) (<<changed per container) bash
 
-#code for PPA in ubuntu for git
+#_______________________code for PPA in ubuntu for git_____________________________________________
 
 sudo add-apt-repository ppa:git-core/ppa
 sudo apt update
