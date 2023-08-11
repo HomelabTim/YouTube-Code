@@ -13,7 +13,7 @@ echo '/mnt/5GiB.swap swap swap defaults 0 0' | sudo tee -a /etc/fstab
 
 
 #create directories and set ownership
-sudo mkdir -p /data/shares/mystuff
+sudo mkdir -p /data/shares/development
 sudo mkdir -p /data/profiles
 sudo chown -R 1000:1000 /data
 
@@ -23,11 +23,11 @@ curl -O https://kasmweb-build-artifacts.s3.amazonaws.com/kasm_backend/branches/d
 tar -xf kasm_workspaces_develop.tar.gz
 sudo bash kasm_release/install.sh
 
-/data/profiles/mystuff/{username}
+/data/profiles/{username}
 
 {
-    "/data/shares/mystuff": {
-        "bind":"/shares/mystuff",
+    "/data/shares/development": {
+        "bind":"/shares",
         "mode":"rw",
         "uid":1000,
         "gid":1000,
@@ -36,6 +36,7 @@ sudo bash kasm_release/install.sh
 }
 
 #Default Web Filter Policy
+
 
 #Chrome Favorites
 
