@@ -25,7 +25,7 @@ curl -O https://kasmweb-build-artifacts.s3.amazonaws.com/kasm_backend/branches/d
 tar -xf kasm_workspaces_develop.tar.gz
 sudo bash kasm_release/install.sh
 
-#_______________________presistant profiles_____________________________________________
+#_______________________persistent profiles_____________________________________________
 
 /data/profiles/{username}
 
