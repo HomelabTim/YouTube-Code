@@ -1,3 +1,7 @@
+#Command to switch assets permission
+sudo chown -R 1000:1000 assets/
+
+#Homer Code Below v
 ---
 # Homepage configuration
 # See https://fontawesome.com/v5/search for icons options
