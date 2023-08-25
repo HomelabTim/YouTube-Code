@@ -3,6 +3,9 @@ ________________________________________________Change Ubuntu Server to static__
 (change nameservers)
 echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null
 
+find ip 
+ip add | grep 192
+
 cd /etc/netplan/ 
 ls 
 nano the .yaml file 
