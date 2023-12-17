@@ -1,0 +1,93 @@
+---
+# Homepage configuration
+# See https://fontawesome.com/icons for icons options
+
+title: "HomelabTim"
+subtitle: "Main Dashboard"
+logo: "assets/tools/logonotext.png"
+# icon: "fas fa-skull-crossbones" # Optional icon
+
+header: true
+footer: '<p>All items on this page are created and owned by HomelabTim<p>' # set false if you want to hide it.
+
+# Enable searchbar
+search: true
+# Optional: Different hotkey for search, defaults to "/"
+# searchHotkey: "Shift"
+
+# Optional theme customization
+theme: dark
+colors:
+  light:
+    border-radius: 14px
+    highlight-primary: "rgba(232, 233, 255, 0.87)"
+    highlight-secondary: "#4d48e8"
+    highlight-hover: "rgba(232, 233, 255, 1)"
+    background: "rgba(232, 233, 255, 1)"
+    card-background: rgba(232, 233, 255, 0.87)
+    footer-background: "rgba(232, 233, 255, 1)"
+    text: "#00044b"
+    text-header: "#fafafa"
+    text-title: "#00044b"
+    text-subtitle: "#161839"
+    card-shadow: rgba(0, 0, 0, 0.5)
+    link: "#3255dc"
+    link-hover: "#1830ae"
+    background-image: "url(../assets/img/wall5.jpg)"
+  dark:
+    border-radius: 14px
+    highlight-primary: rgba(0, 48, 73, 0.84)
+    highlight-secondary: "rgba(214, 40, 40)"
+    highlight-hover: rgba(0, 48, 73, 1)
+    background: "rgba(0, 48, 73, 1)"
+    card-background: "rgba(0, 48, 73, 0.84)"
+    footer-background: "rgba(0, 48, 73, 1)"
+    text: "#EAE2B7"
+    text-header: "#EAE2B7"
+    text-title: "#F77F00"
+    text-subtitle: "#EAE2B7"
+    link: "#EAE2B7"
+    link-hover: "#EAE2B7"
+    background-image: "url(../assets/img/wall5.jpg)"
+
+# Optional message
+message:
+  style: "is-dark" # See https://bulma.io/documentation/components/message/#colors for styling options.
+  title: "Demo !"
+  icon: "fa fa-grin"
+  content: "This is a dummy homepage demo."
+
+# Optional navbar
+# links: [] # Allows for navbar (dark mode, layout, and search) without any links
+links:
+  - name: "Contribute"
+    icon: "fab fa-github"
+    url: "https://github.com/GeorgeGedox/HomerGX"
+    target: "_blank" # optional html a tag target attribute
+  - name: "My blog"
+    icon: "fas fa-book"
+    url: "https://georgev.design/blog"
+  # this will link to a second homer page that will load config from additionnal-page.yml and keep default config values as in config.yml file
+  # see url field and assets/additionnal-page.yml.dist used in this example:
+  - name: "another page!"
+    icon: "fas fa-file-alt"
+    url: "#additionnal-page"
+
+# Services
+# First level array represent a group.
+# Leave only a "items" key if not using group (group name, icon & tagstyle are optional, section separation will not be displayed).
+services:
+  - name: "Applications"
+    icon: "fas fa-cloud"
+    items:
+      - name: "Awesome app"
+        logo: "assets/tools/sample.png"
+        subtitle: "Bookmark example"
+        tag: "app"
+        url: "https://www.reddit.com/r/selfhosted/"
+        target: "_blank" # optional html a tag target attribute
+      - name: "Another one"
+        logo: "assets/tools/sample2.png"
+        subtitle: "Another application"
+        tag: "app"
+        url: "#"
