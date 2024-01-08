@@ -1,3 +1,0 @@
-#This code runs an update to your system and install docker
-cd /tmp
-wget -qO- https://raw.githubusercontent.com/HomelabTim/YouTube-Code/main/docker.sh | bash
