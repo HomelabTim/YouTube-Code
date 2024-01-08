@@ -34,6 +34,8 @@ docker-compose up -d
 # Login Info
 
 ```bash
-Email:    admin@example.com
-Password: changeme
+admin@example.com
+```
+```bash
+changeme
 ```
