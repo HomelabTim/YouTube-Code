@@ -1,3 +1,6 @@
+# Docker Compose File
+
+```bash
 ---
 version: "2"
 services:
@@ -19,19 +22,25 @@ services:
       - /torrent/config/QBittorrentVPN:/config
       - /data/admin/Media/Downloads:/downloads
     restart: unless-stopped
+```
 
+# Change fstab
 
-
-___________________add to fstab________________________
-
+```bash
 sudo nano /etc/fstab
+```
+```bash
 //192.168.0.41/NAS /data cifs username=(YOUR INFO HERE),password=(YOUR INFO HERE) 0 0
+```
 
+```warning
+DONT USE SNAP WITH DOCKER
+```
 
-__________________________Never Forget_____________________________
+if you do run this
 
-DONT USE SNAP WITH DOCKER!!!!!!
-if you do run this 
+```bash
 sudo snap remove docker
 sudo rm -R /var/lib/docker
 sudo apt-get remove docker docker-engine docker.io
+```
