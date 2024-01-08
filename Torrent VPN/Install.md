@@ -33,9 +33,8 @@ sudo nano /etc/fstab
 //192.168.0.41/NAS /data cifs username=(YOUR INFO HERE),password=(YOUR INFO HERE) 0 0
 ```
 
-```warning
-DONT USE SNAP WITH DOCKER
-```
+>[!WARNING]
+>DONT USE SNAP WITH DOCKER
 
 if you do run this
 
