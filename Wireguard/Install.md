@@ -16,4 +16,6 @@ sudo wg-quick down wg0
 ```
 >[!TIP]
 >To show the connections use:
->sudo wg show
+```bash
+sudo wg show
+```
