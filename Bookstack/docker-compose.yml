@@ -5,7 +5,7 @@ services:
     image: linuxserver/bookstack:latest
     container_name: bookstack
     environment:
-      - PUID=1001
+      - PUID=10011
       - PGID=1001
       - DB_HOST=bookstack_db
       - DB_PORT=3306
